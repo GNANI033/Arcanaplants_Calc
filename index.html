@@ -6,7 +6,7 @@
 <title>Arcana Plants — Blend Pricing Calculator</title>
 
   <!-- PWA Meta -->
-  <meta name="theme-color" content="#4a6650">
+  <meta name="theme-color" content="#5a9465">
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="apple-mobile-web-app-title" content="Arcana Pricing">
@@ -29,21 +29,21 @@
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
 :root {
-  --bg:        #f5f2eb;
-  --bg2:       #ede9de;
-  --surface:   #faf8f3;
-  --border:    #c8bfa8;
-  --border2:   #b0a48e;
-  --ink:       #1e1c16;
-  --ink2:      #4a4538;
-  --muted:     #8a8270;
-  --sage:      #4a6650;
-  --sage2:     #6a8c70;
-  --sage-pale: rgba(74,102,80,0.08);
-  --gold:      #8c7040;
-  --gold2:     #b09058;
-  --red:       #8c3a2e;
-  --green-msg: #3a6644;
+  --bg:        #0d1210;
+  --bg2:       #131b14;
+  --surface:   #192018;
+  --border:    #2c3f2e;
+  --border2:   #3d5540;
+  --ink:       #eef5ef;
+  --ink2:      #c8deca;
+  --muted:     #9ab89e;
+  --sage:      #62a870;
+  --sage2:     #82cc90;
+  --sage-pale: rgba(98,168,112,0.15);
+  --gold:      #d4aa5a;
+  --gold2:     #f0cc70;
+  --red:       #f06050;
+  --green-msg: #78d488;
 }
 
 html { scroll-behavior: smooth; }
@@ -62,7 +62,7 @@ body::before {
   content: '';
   position: fixed;
   inset: 0;
-  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E");
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.03'/%3E%3C/svg%3E");
   pointer-events: none;
   z-index: 0;
 }
@@ -96,7 +96,7 @@ header {
   font-weight: 400;
   letter-spacing: 0.35em;
   text-transform: uppercase;
-  color: var(--sage);
+  color: var(--sage2);
 }
 
 h1 {
@@ -118,7 +118,7 @@ h1 em {
   font-size: 0.72rem;
   letter-spacing: 0.2em;
   text-transform: uppercase;
-  color: var(--muted);
+  color: var(--ink2);
 }
 
 /* ── botanical divider ── */
@@ -157,7 +157,7 @@ h1 em {
   font-family: 'Cormorant Garamond', serif;
   font-size: 2rem;
   font-weight: 300;
-  color: var(--border2);
+  color: var(--sage2);
   line-height: 1;
   width: 28px;
   flex-shrink: 0;
@@ -173,7 +173,7 @@ h1 em {
 
 .section-sub {
   font-size: 0.67rem;
-  color: var(--muted);
+  color: var(--ink2);
   letter-spacing: 0.12em;
   text-transform: uppercase;
   margin-left: auto;
@@ -181,7 +181,7 @@ h1 em {
 
 /* ── PANEL ── */
 .panel {
-  background: var(--surface);
+  background: var(--surface); /* dark panel */
   border: 1px solid var(--border);
   border-radius: 2px;
   padding: 24px;
@@ -224,13 +224,13 @@ label {
   font-size: 0.63rem;
   letter-spacing: 0.15em;
   text-transform: uppercase;
-  color: var(--muted);
+  color: var(--ink2);
 }
 
 input[type="text"],
 input[type="number"] {
-  background: var(--bg);
-  border: 1px solid var(--border);
+  background: var(--bg2);
+  border: 1px solid var(--border2);
   border-radius: 1px;
   color: var(--ink);
   font-family: 'Jost', sans-serif;
@@ -257,8 +257,8 @@ input::placeholder { color: var(--muted); opacity: 0.5; }
 }
 .unit-btn {
   background: none;
-  border: 1px solid var(--border);
-  color: var(--ink2);
+  border: 1px solid var(--border2);
+  color: var(--ink);
   font-family: 'Jost', sans-serif;
   font-size: 0.72rem;
   letter-spacing: 0.06em;
@@ -286,7 +286,7 @@ input::placeholder { color: var(--muted); opacity: 0.5; }
   font-family: 'Cormorant Garamond', serif;
   font-size: 0.85rem;
   font-style: italic;
-  color: var(--sage);
+  color: var(--sage2);
   margin-bottom: 14px;
   letter-spacing: 0.04em;
 }
@@ -296,8 +296,8 @@ input::placeholder { color: var(--muted); opacity: 0.5; }
   top: 16px;
   right: 16px;
   background: none;
-  border: 1px solid var(--border2);
-  color: var(--muted);
+  border: 1px solid var(--muted);
+  color: var(--ink2);
   font-family: 'Jost', sans-serif;
   font-size: 0.65rem;
   letter-spacing: 0.1em;
@@ -340,8 +340,8 @@ input::placeholder { color: var(--muted); opacity: 0.5; }
   width: 100%;
   margin-top: 4px;
   background: none;
-  border: 1px dashed var(--border2);
-  color: var(--sage);
+  border: 1px dashed var(--sage);
+  color: var(--sage2);
   font-family: 'Jost', sans-serif;
   font-size: 0.75rem;
   letter-spacing: 0.12em;
@@ -361,7 +361,7 @@ input::placeholder { color: var(--muted); opacity: 0.5; }
 
 .calc-btn {
   background: var(--sage);
-  color: #f5f2eb;
+  color: #eef5ef;
   border: none;
   font-family: 'Cormorant Garamond', serif;
   font-size: 1.2rem;
@@ -381,7 +381,7 @@ input::placeholder { color: var(--muted); opacity: 0.5; }
   background: rgba(255,255,255,0);
   transition: background 0.2s;
 }
-.calc-btn:hover { background: var(--ink); transform: translateY(-2px); box-shadow: 0 12px 32px rgba(30,28,22,0.18); }
+.calc-btn:hover { background: var(--ink); transform: translateY(-2px); box-shadow: 0 12px 32px rgba(0,0,0,0.5); }
 .calc-btn:active { transform: translateY(0); }
 
 /* ── RESULTS ── */
@@ -408,7 +408,7 @@ input::placeholder { color: var(--muted); opacity: 0.5; }
 .hero-cell {
   padding: 32px 24px;
   text-align: center;
-  color: #f5f2eb;
+  color: #eef5ef;
 }
 
 .hero-cell .h-label {
@@ -473,7 +473,7 @@ thead th {
   font-size: 0.6rem;
   letter-spacing: 0.14em;
   text-transform: uppercase;
-  color: var(--muted);
+  color: var(--ink2);
   padding: 10px 20px;
   text-align: left;
   border-bottom: 1px solid var(--border);
@@ -482,8 +482,8 @@ thead th {
 
 tbody td {
   padding: 11px 20px;
-  border-bottom: 1px solid rgba(200,191,168,0.4);
-  color: var(--ink2);
+  border-bottom: 1px solid rgba(98,168,112,0.2);
+  color: var(--ink);
   font-weight: 300;
 }
 
@@ -494,7 +494,7 @@ tbody tr:last-child td {
   background: var(--sage-pale);
 }
 
-tbody tr:hover td { background: rgba(200,191,168,0.12); }
+tbody tr:hover td { background: rgba(98,168,112,0.08); }
 tbody tr:last-child:hover td { background: var(--sage-pale); }
 
 /* suggested retail */
@@ -507,7 +507,7 @@ tbody tr:last-child:hover td { background: var(--sage-pale); }
 
 .price-card {
   background: var(--surface);
-  border: 1px solid var(--border);
+  border: 1px solid var(--border2);
   border-radius: 2px;
   padding: 20px 16px;
   text-align: center;
@@ -534,7 +534,7 @@ tbody tr:last-child:hover td { background: var(--sage-pale); }
   font-family: 'Cormorant Garamond', serif;
   font-size: 2rem;
   font-weight: 600;
-  color: var(--ink);
+  color: var(--gold2);
 }
 
 .price-card .pc-margin {
@@ -563,11 +563,11 @@ tbody tr:last-child:hover td { background: var(--sage-pale); }
 footer {
   text-align: center;
   padding: 48px 0 0;
-  color: var(--muted);
+  color: var(--ink2);
   font-size: 0.63rem;
   letter-spacing: 0.14em;
   text-transform: uppercase;
-  border-top: 1px solid var(--border);
+  border-top: 1px solid var(--border2);
   margin-top: 56px;
 }
 
@@ -1019,7 +1019,7 @@ function calculate() {
       const banner = document.createElement('div');
       banner.style.cssText = `
         position:fixed;bottom:20px;left:50%;transform:translateX(-50%);
-        background:#1e1c16;color:#f5f2eb;padding:12px 20px;border-radius:2px;
+        background:#0e110f;color:#e8f0e9;padding:12px 20px;border-radius:2px;
         font-family:'Jost',sans-serif;font-size:0.72rem;letter-spacing:0.1em;
         text-transform:uppercase;z-index:9999;text-align:center;
         box-shadow:0 8px 32px rgba(0,0,0,0.3);max-width:300px;line-height:1.6;
@@ -1039,7 +1039,7 @@ function calculate() {
     btn.textContent = '＋ Install App';
     btn.style.cssText = `
       position:fixed;bottom:24px;right:24px;
-      background:#4a6650;color:#f5f2eb;border:none;border-radius:2px;
+      background:#5a9465;color:#0e110f;border:none;border-radius:2px;
       font-family:'Jost',sans-serif;font-size:0.72rem;letter-spacing:0.12em;
       text-transform:uppercase;padding:12px 20px;cursor:pointer;z-index:9999;
       box-shadow:0 4px 20px rgba(74,102,80,0.4);
